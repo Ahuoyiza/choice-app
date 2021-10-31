@@ -2,15 +2,21 @@ import React from 'react';
 import{ 
     Flex,
     Box,
-    Text,
+
     Heading,
-    Image,
+   
   } from '@chakra-ui/react';
 
-const Layout = () => {
+const Layout = ({children}) => {
     return (
-        <Flex>
-            <Heading>Layout</Heading>
+        <Flex
+        direction="column"
+        p={10}
+        >
+            <Heading>Choice maker</Heading>
+            <Box>
+                {children}
+            </Box>
         </Flex>
     )
 }
